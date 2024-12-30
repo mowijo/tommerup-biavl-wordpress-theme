@@ -1,0 +1,27 @@
+@media (pointer: fine)
+{
+#productDisplayAsTable
+{
+    display: block;
+}
+
+#productDisplayAsFlow
+{
+    display: none;
+}
+}
+
+
+
+@media (pointer: coarse)
+{
+#productDisplayAsTable
+{
+    display: none;
+}
+
+#productDisplayAsFlow
+{
+    display: block;
+}
+}
