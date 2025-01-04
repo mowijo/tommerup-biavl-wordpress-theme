@@ -8,9 +8,11 @@ function build_menu($menu_items, $indentation, $parent_id = 0) {
 
     foreach ($menu_items as $item) {
         if ($item->menu_item_parent == $parent_id) {
+            $submenu = build_menu($menu_items, $indentation."      ", $item->ID);
+
             $output .= $indentation."   <li>";
             $output .= "<a";
-            if( strpos($item->attr_title, "NO_PAGE") === false)
+            if( empty($submenu) )
             {
                 $output .= " href=\"" . esc_url($item->url) . "\"";
             }
@@ -19,7 +21,6 @@ function build_menu($menu_items, $indentation, $parent_id = 0) {
             $output .= "</a>";
 
             // Check if this item has children
-            $submenu = build_menu($menu_items, $indentation."      ", $item->ID);
             if (!empty($submenu)) {
                 $output .= $submenu;
             }
