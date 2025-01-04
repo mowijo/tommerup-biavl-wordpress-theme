@@ -10,7 +10,16 @@ function build_menu($menu_items, $indentation, $parent_id = 0) {
         if ($item->menu_item_parent == $parent_id) {
             $submenu = build_menu($menu_items, $indentation."      ", $item->ID);
 
-            $output .= $indentation."   <li>";
+
+
+	    // We hide all pages NOT "publish"-ed;
+	    $linked_post = get_post($item->object_id);
+	    if($linked_post->post_status != "publish")
+	    {
+              continue;
+            }
+
+            $output .= $indentation."   <li> " ;
             $output .= "<a";
             if( empty($submenu) )
             {
