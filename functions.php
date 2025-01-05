@@ -12,13 +12,6 @@ add_action( 'after_setup_theme', 'my_theme_register_menus' );
 
 function enqueue_tba_stylesheet() {
     wp_enqueue_style(
-        'tba-menu-style', // Handle for the stylesheet
-        get_template_directory_uri() . '/menu.css', // Path to the stylesheet
-        array(), // Dependencies (none in this case)
-        '1.0.0', // Version number
-        'all' // Media type
-    );
-    wp_enqueue_style(
         'tba-product-style', // Handle for the stylesheet
         get_template_directory_uri() . '/products.css', // Path to the stylesheet
         array(), // Dependencies (none in this case)

@@ -45,7 +45,6 @@ $tags = new WP_HTML_Tag_Processor( $content );
 $previousTag = "";
 while ( $tags->next_tag() ) {
     $currentTag = $tags->get_tag();
-    echo $currentTag."<br/>";
     if($currentTag == "P" && $previousTag == "IMG")
     {
         $tags->set_attribute("style", "margin-top: -2rem;");

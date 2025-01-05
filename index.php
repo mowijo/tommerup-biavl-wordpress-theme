@@ -45,7 +45,7 @@ include("page_start_and_menu.php");
        else
        {
            ?>
-           <p><?php esc_html_e('Sorry, no content available.'); ?></p>
+           <p><?php esc_html_e('Denne side har endnu ikke noget indhold at vise.'); ?></p>
        <?php
        }
        ?>
