@@ -22,7 +22,7 @@ while ( $tags->next_tag() ) {
     $currentTag = $tags->get_tag();
     if($currentTag == "P" && $previousTag == "IMG")
     {
-        $tags->set_attribute("style", "margin-top: -2rem;");
+		$tags->set_attribute("class", "firstPAfterImg");
 
     }
     $previousTag = $currentTag;
@@ -47,15 +47,15 @@ while ( $tags->next_tag() ) {
     $currentTag = $tags->get_tag();
     if($currentTag == "P" && $previousTag == "IMG")
     {
-        $tags->set_attribute("style", "margin-top: -2rem;");
-
+		$tags->set_attribute("class", "firstPAfterImg");
     }
     $previousTag = $currentTag;
 }
 echo $tags->get_updated_html();
 ?>
-
+<p style="text-align: center;">
     <img style="width: 15rem;" src="<?php echo get_template_directory_uri(); ?>/assets/images/honey-booth-with-white-background.png"/>
+	</p>
 </section>
 
 <?php

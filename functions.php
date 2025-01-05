@@ -33,7 +33,6 @@ if($block["blockName"] ==  "core/image")
         $marginPosition = "left";
         $attr = $block["attrs"];
 
-
         preg_match('/<img\s+src="([^"]+)"/', $block_content, $matches);
 
         if (isset($matches[1])) {
@@ -57,7 +56,7 @@ if($block["blockName"] ==  "core/image")
         }
 
 
-        return "<p><img src=\"$url\" style=\"float: $align; height: 20rem; border: 1px solid var(--tbaDarkYellow); margin-$marginPosition: 1rem;\"/></p>";
+        return "<p><img src=\"$url\" class=\"$align"."Align\" /></p>";
     }
 
 /*

@@ -149,9 +149,14 @@ section
 }
 
 section p {
-margin-bottom: 1em;
-
+	margin-bottom: 1em;
 }
+        
+.firstPAfterImg		
+{
+	margin-top: -2rem;
+}
+
 footer
 {
     border: none;
@@ -354,6 +359,75 @@ border: 1px solid var(--tbaDarkYellow);
 img + p {
   min-height: 22rem;
 }
+
+img.leftAlign, img.rightAlign
+{
+	border:	1px solid var(--tbaDarkYellow); 
+	max-width: 20rem; 
+	max-height: 20rem; 
+	width: auto; 
+	height: auto; 
+}
+
+img.leftAlign
+{
+	float: left;
+    margin-right: 1rem;
+}
+
+img.rightAlign
+{
+	float: right;
+    margin-left: 1rem;
+}
+
+
+@media (max-width: 30rem) {
+	
+	
+p, h2
+{
+	display: block;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+p:has(> img:only-child) {
+	display: block;
+	text-align: center;  
+	margin-bottom: 1rem;  
+}	
+
+.firstPAfterImg		
+{
+	margin-top: -1rem;
+}
+
+
+img.leftAlign, img.rightAlign
+{
+	border:	1px solid var(--tbaDarkYellow); 
+	max-width: 20rem; 
+	max-height: 20rem; 
+	width: auto; 
+	height: auto; 
+}
+
+img.leftAlign
+{
+	float: none;
+	margins: auto;
+}
+
+img.rightAlign
+{
+	float: none;
+    margins: auto;
+}
+ 
+ 
+}
+
 
 </style>
 
